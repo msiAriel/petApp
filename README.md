@@ -9,56 +9,67 @@
 
 ## About project
 
-Proyecto Laravel - PetApp
-Requisitos
-PHP >= 8.x
+ <h2>Requisitos</h2>
+  <ul>
+    <li>PHP >= 8.x</li>
+    <li>Composer</li>
+    <li>Node.js & npm</li>
+    <li>Base de datos (MySQL, PostgreSQL, etc.)</li>
+  </ul>
 
-Composer
+  <h2>Instalación</h2>
+  <ol>
+    <li>Clona el repositorio:<br>
+      <code>git clone https://github.com/msiAriel/petApp.git</code><br>
+      <code>cd petApp</code>
+    </li>
 
-Node.js & npm
+    <li>Copia el archivo <code>.env.example</code> para crear el archivo <code>.env</code>:<br>
+      <code>cp .env.example .env</code>
+    </li>
 
-Base de datos (MySQL, PostgreSQL, etc.)
+    <li>Configura el archivo <code>.env</code> con los datos de tu base de datos y otros ajustes necesarios.</li>
 
-Instalación
-Clona el repositorio:
-git clone https://github.com/msiAriel/petApp.git
-cd petApp
+    <li>Instala las dependencias de PHP con Composer:<br>
+      <code>composer install</code>
+    </li>
 
-Copia el archivo .env.example para crear el archivo .env:
-cp .env.example .env
+    <li>Instala las dependencias de JavaScript y construye los assets:<br>
+      <code>npm install</code><br>
+      <code>npm run build</code>
+    </li>
 
-Configura el archivo .env con los datos de tu base de datos y otros ajustes necesarios.
+    <li>Ejecuta las migraciones y carga los datos iniciales (seeders):<br>
+      <code>php artisan migrate:fresh --seed</code>
+    </li>
 
-Instala las dependencias de PHP con Composer:
-composer install
+    <li>Genera la clave JWT para autenticación:<br>
+      <code>php artisan jwt:secret</code>
+    </li>
 
-Instala las dependencias de JavaScript y construye los assets:
-npm install
-npm run build
+    <li>Levanta el servidor de desarrollo de Laravel:<br>
+      <code>php artisan serve</code><br>
+      El proyecto estará disponible en: <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a>
+    </li>
 
-Ejecuta las migraciones y carga los datos iniciales (seeders):
-php artisan migrate:fresh --seed
+  </ol>
 
-Levanta el servidor de desarrollo de Laravel:
-php artisan serve
+  <h2>Documentación de la API</h2>
+  <p>La documentación está disponible en la siguiente ruta:</p>
+  <p><a href="http://127.0.0.1:8000/docs" target="_blank">http://127.0.0.1:8000/docs</a></p>
 
-El proyecto estará disponible en http://127.0.0.1:8000.
+  <h2>Uso básico</h2>
+  <ul>
+    <li>Primero debes registrar un usuario.</li>
+    <li>Al registrarte, quedas autenticado automáticamente y recibirás un token de acceso.</li>
+    <li>Usa este token para hacer solicitudes autenticadas a la API.</li>
+  </ul>
 
-Documentación de la API
-La documentación está disponible en la siguiente ruta:
-http://127.0.0.1:8000/docs
+  <h2>Pruebas unitarias</h2>
+  <p>Dentro de <code>tests/Unit/</code> hay un archivo llamado <code>ExampleTest.php</code> que realiza pruebas a un endpoint de la API.</p>
 
-Uso básico
-Primero debes registrar un usuario.
+  <h3>Nota importante</h3>
+  <p>Para programar, escribo todo en inglés y utilizo convenciones de nomenclatura en inglés.</p>
 
-Al registrarte, quedas autenticado automáticamente y recibirás un token de acceso.
-
-Usa este token para hacer solicitudes autenticadas a la API.
-
-Pruebas unitarias
-dentro de test/Unit/ 
-esta un archivo llamado ExampleTest que hace prueba a una endPoint 
-
-Nota importante: Para programar, escribo todo en inglés y utilizo convenciones de nomenclatura en inglés.
-
-Si tienes alguna duda, abre un issue para soporte.
+  <h3>Soporte</h3>
+  <p>Si tienes alguna duda, abre un issue para soporte.</p>

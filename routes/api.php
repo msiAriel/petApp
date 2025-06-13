@@ -23,7 +23,7 @@ Route::prefix('peoples')->group(function () {
     Route::get('/', [PeoplesController::class, 'all']);
     Route::middleware('api')->group(function () {
         Route::post('/', [PeoplesController::class, 'store']);
-        Route::put('{id}', [PeoplesController::class, 'update']);
+        Route::post('{id}', [PeoplesController::class, 'update']);
         Route::delete('{id}', [PeoplesController::class, 'destroy']);
     });
 });

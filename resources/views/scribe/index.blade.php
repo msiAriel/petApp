@@ -92,8 +92,8 @@
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-POSTapi-peoples">
                                 <a href="#endpoints-POSTapi-peoples">POST api/peoples</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-peoples--id-">
-                                <a href="#endpoints-PUTapi-peoples--id-">PUT api/peoples/{id}</a>
+                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-peoples--id-">
+                                <a href="#endpoints-POSTapi-peoples--id-">POST api/peoples/{id}</a>
                             </li>
                                                                                 <li class="tocify-item level-2" data-unique="endpoints-DELETEapi-peoples--id-">
                                 <a href="#endpoints-DELETEapi-peoples--id-">DELETE api/peoples/{id}</a>
@@ -870,21 +870,12 @@ access-control-allow-origin: *
                 &quot;date&quot;: &quot;1988-02-17&quot;,
                 &quot;created_at&quot;: null,
                 &quot;updated_at&quot;: null
-            },
-            {
-                &quot;id&quot;: 5,
-                &quot;name&quot;: &quot;Ariel&quot;,
-                &quot;email&quot;: &quot;ariel.taipe@gmail.com&quot;,
-                &quot;address&quot;: &quot;la libertad&quot;,
-                &quot;date&quot;: null,
-                &quot;created_at&quot;: &quot;2025-06-13T04:29:11.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2025-06-13T04:29:11.000000Z&quot;
             }
         ],
         &quot;first_page_url&quot;: &quot;http://localhost/api/peoples?page=1&quot;,
         &quot;from&quot;: 1,
-        &quot;last_page&quot;: 2,
-        &quot;last_page_url&quot;: &quot;http://localhost/api/peoples?page=2&quot;,
+        &quot;last_page&quot;: 1,
+        &quot;last_page_url&quot;: &quot;http://localhost/api/peoples?page=1&quot;,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -897,22 +888,17 @@ access-control-allow-origin: *
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://localhost/api/peoples?page=2&quot;,
-                &quot;label&quot;: &quot;2&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://localhost/api/peoples?page=2&quot;,
+                &quot;url&quot;: null,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;active&quot;: false
             }
         ],
-        &quot;next_page_url&quot;: &quot;http://localhost/api/peoples?page=2&quot;,
+        &quot;next_page_url&quot;: null,
         &quot;path&quot;: &quot;http://localhost/api/peoples&quot;,
         &quot;per_page&quot;: 5,
         &quot;prev_page_url&quot;: null,
-        &quot;to&quot;: 5,
-        &quot;total&quot;: 6
+        &quot;to&quot;: 4,
+        &quot;total&quot;: 4
     }
 }</code>
  </pre>
@@ -1096,19 +1082,19 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-PUTapi-peoples--id-">PUT api/peoples/{id}</h2>
+                    <h2 id="endpoints-POSTapi-peoples--id-">POST api/peoples/{id}</h2>
 
 <p>
 </p>
 
 
 
-<span id="example-requests-PUTapi-peoples--id-">
+<span id="example-requests-POSTapi-peoples--id-">
 <blockquote>Example request:</blockquote>
 
 
 <div class="bash-example">
-    <pre><code class="language-bash">curl --request PUT \
+    <pre><code class="language-bash">curl --request POST \
     "http://localhost/api/peoples/1" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre></div>
@@ -1125,58 +1111,58 @@ const headers = {
 };
 
 fetch(url, {
-    method: "PUT",
+    method: "POST",
     headers,
 }).then(response =&gt; response.json());</code></pre></div>
 
 </span>
 
-<span id="example-responses-PUTapi-peoples--id-">
+<span id="example-responses-POSTapi-peoples--id-">
 </span>
-<span id="execution-results-PUTapi-peoples--id-" hidden>
+<span id="execution-results-POSTapi-peoples--id-" hidden>
     <blockquote>Received response<span
-                id="execution-response-status-PUTapi-peoples--id-"></span>:
+                id="execution-response-status-POSTapi-peoples--id-"></span>:
     </blockquote>
-    <pre class="json"><code id="execution-response-content-PUTapi-peoples--id-"
+    <pre class="json"><code id="execution-response-content-POSTapi-peoples--id-"
       data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
 </span>
-<span id="execution-error-PUTapi-peoples--id-" hidden>
+<span id="execution-error-POSTapi-peoples--id-" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-PUTapi-peoples--id-">
+    <pre><code id="execution-error-message-POSTapi-peoples--id-">
 
 Tip: Check that you&#039;re properly connected to the network.
 If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
 You can check the Dev Tools console for debugging information.</code></pre>
 </span>
-<form id="form-PUTapi-peoples--id-" data-method="PUT"
+<form id="form-POSTapi-peoples--id-" data-method="POST"
       data-path="api/peoples/{id}"
       data-authed="0"
       data-hasfiles="0"
       data-isarraybody="0"
       autocomplete="off"
-      onsubmit="event.preventDefault(); executeTryOut('PUTapi-peoples--id-', this);">
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-peoples--id-', this);">
     <h3>
         Request&nbsp;&nbsp;&nbsp;
                     <button type="button"
                     style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-tryout-PUTapi-peoples--id-"
-                    onclick="tryItOut('PUTapi-peoples--id-');">Try it out ⚡
+                    id="btn-tryout-POSTapi-peoples--id-"
+                    onclick="tryItOut('POSTapi-peoples--id-');">Try it out ⚡
             </button>
             <button type="button"
                     style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-canceltryout-PUTapi-peoples--id-"
-                    onclick="cancelTryOut('PUTapi-peoples--id-');" hidden>Cancel 🛑
+                    id="btn-canceltryout-POSTapi-peoples--id-"
+                    onclick="cancelTryOut('POSTapi-peoples--id-');" hidden>Cancel 🛑
             </button>&nbsp;&nbsp;
             <button type="submit"
                     style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
-                    id="btn-executetryout-PUTapi-peoples--id-"
+                    id="btn-executetryout-POSTapi-peoples--id-"
                     data-initial-text="Send Request 💥"
                     data-loading-text="⏱ Sending..."
                     hidden>Send Request 💥
             </button>
             </h3>
             <p>
-            <small class="badge badge-darkblue">PUT</small>
+            <small class="badge badge-black">POST</small>
             <b><code>api/peoples/{id}</code></b>
         </p>
                 <h4 class="fancy-heading-panel"><b>Headers</b></h4>
@@ -1185,7 +1171,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Content-Type"                data-endpoint="PUTapi-peoples--id-"
+                              name="Content-Type"                data-endpoint="POSTapi-peoples--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1196,7 +1182,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 &nbsp;
  &nbsp;
                 <input type="text" style="display: none"
-                              name="Accept"                data-endpoint="PUTapi-peoples--id-"
+                              name="Accept"                data-endpoint="POSTapi-peoples--id-"
                value="application/json"
                data-component="header">
     <br>
@@ -1208,7 +1194,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
 <small>integer</small>&nbsp;
  &nbsp;
                 <input type="number" style="display: none"
-               step="any"               name="id"                data-endpoint="PUTapi-peoples--id-"
+               step="any"               name="id"                data-endpoint="POSTapi-peoples--id-"
                value="1"
                data-component="url">
     <br>
@@ -1532,8 +1518,8 @@ access-control-allow-origin: *
                 &quot;origin&quot;: &quot;Canada&quot;,
                 &quot;temperament&quot;: &quot;Friendly&quot;,
                 &quot;age&quot;: 3,
-                &quot;people_id&quot;: 3,
-                &quot;image_url&quot;: &quot;https://example.com/images/max.jpg&quot;,
+                &quot;people_id&quot;: 2,
+                &quot;image_url&quot;: &quot;https://cdn2.thedogapi.com/images/lNnWNU4qU.jpg&quot;,
                 &quot;created_at&quot;: null,
                 &quot;updated_at&quot;: null
             },
@@ -1546,7 +1532,7 @@ access-control-allow-origin: *
                 &quot;temperament&quot;: &quot;Affectionate&quot;,
                 &quot;age&quot;: 2,
                 &quot;people_id&quot;: 2,
-                &quot;image_url&quot;: &quot;https://example.com/images/luna.jpg&quot;,
+                &quot;image_url&quot;: &quot;https://cdn2.thedogapi.com/images/lNnWNU4qU.jpg&quot;,
                 &quot;created_at&quot;: null,
                 &quot;updated_at&quot;: null
             },
@@ -1558,8 +1544,8 @@ access-control-allow-origin: *
                 &quot;origin&quot;: &quot;England&quot;,
                 &quot;temperament&quot;: &quot;Curious&quot;,
                 &quot;age&quot;: 4,
-                &quot;people_id&quot;: 4,
-                &quot;image_url&quot;: &quot;https://example.com/images/charlie.jpg&quot;,
+                &quot;people_id&quot;: 1,
+                &quot;image_url&quot;: &quot;https://cdn2.thedogapi.com/images/lNnWNU4qU.jpg&quot;,
                 &quot;created_at&quot;: null,
                 &quot;updated_at&quot;: null
             },
@@ -1571,8 +1557,8 @@ access-control-allow-origin: *
                 &quot;origin&quot;: &quot;Iran&quot;,
                 &quot;temperament&quot;: &quot;Calm&quot;,
                 &quot;age&quot;: 1,
-                &quot;people_id&quot;: 3,
-                &quot;image_url&quot;: &quot;https://example.com/images/bella.jpg&quot;,
+                &quot;people_id&quot;: 2,
+                &quot;image_url&quot;: &quot;https://cdn2.thedogapi.com/images/lNnWNU4qU.jpg&quot;,
                 &quot;created_at&quot;: null,
                 &quot;updated_at&quot;: null
             },
@@ -1584,8 +1570,8 @@ access-control-allow-origin: *
                 &quot;origin&quot;: &quot;England&quot;,
                 &quot;temperament&quot;: &quot;Docile&quot;,
                 &quot;age&quot;: 5,
-                &quot;people_id&quot;: 4,
-                &quot;image_url&quot;: &quot;https://example.com/images/rocky.jpg&quot;,
+                &quot;people_id&quot;: 1,
+                &quot;image_url&quot;: &quot;https://cdn2.thedogapi.com/images/lNnWNU4qU.jpg&quot;,
                 &quot;created_at&quot;: null,
                 &quot;updated_at&quot;: null
             }
@@ -1621,7 +1607,7 @@ access-control-allow-origin: *
         &quot;per_page&quot;: 5,
         &quot;prev_page_url&quot;: null,
         &quot;to&quot;: 5,
-        &quot;total&quot;: 8
+        &quot;total&quot;: 6
     }
 }</code>
  </pre>
