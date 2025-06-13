@@ -23,30 +23,23 @@
       <code>git clone https://github.com/msiAriel/petApp.git</code><br>
       <code>cd petApp</code>
     </li>
-
     <li>Copia el archivo <code>.env.example</code> para crear el archivo <code>.env</code>:<br>
       <code>cp .env.example .env</code>
     </li>
-
     <li>Configura el archivo <code>.env</code> con los datos de tu base de datos y otros ajustes necesarios.</li>
-
     <li>Instala las dependencias de PHP con Composer:<br>
       <code>composer install</code>
     </li>
-
     <li>Instala las dependencias de JavaScript y construye los assets:<br>
       <code>npm install</code><br>
       <code>npm run build</code>
     </li>
-
     <li>Ejecuta las migraciones y carga los datos iniciales (seeders):<br>
       <code>php artisan migrate:fresh --seed</code>
     </li>
-
     <li>Genera la clave JWT para autenticación:<br>
       <code>php artisan jwt:secret</code>
     </li>
-
     <li>Levanta el servidor de desarrollo de Laravel:<br>
       <code>php artisan serve</code><br>
       El proyecto estará disponible en: <a href="http://127.0.0.1:8000" target="_blank">http://127.0.0.1:8000</a>
