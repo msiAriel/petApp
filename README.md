@@ -7,55 +7,58 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Proyecto Laravel - PetApp
+Requisitos
+PHP >= 8.x
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Composer
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Node.js & npm
 
-## Learning Laravel
+Base de datos (MySQL, PostgreSQL, etc.)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Instalación
+Clona el repositorio:
+git clone https://github.com/msiAriel/petApp.git
+cd petApp
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Copia el archivo .env.example para crear el archivo .env:
+cp .env.example .env
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Configura el archivo .env con los datos de tu base de datos y otros ajustes necesarios.
 
-## Laravel Sponsors
+Instala las dependencias de PHP con Composer:
+composer install
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Instala las dependencias de JavaScript y construye los assets:
+npm install
+npm run build
 
-### Premium Partners
+Ejecuta las migraciones y carga los datos iniciales (seeders):
+php artisan migrate:fresh --seed
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Levanta el servidor de desarrollo de Laravel:
+php artisan serve
 
-## Contributing
+El proyecto estará disponible en http://127.0.0.1:8000.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Documentación de la API
+La documentación está disponible en la siguiente ruta:
+http://127.0.0.1:8000/docs
 
-## Code of Conduct
+Uso básico
+Primero debes registrar un usuario.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Al registrarte, quedas autenticado automáticamente y recibirás un token de acceso.
 
-## Security Vulnerabilities
+Usa este token para hacer solicitudes autenticadas a la API.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Pruebas unitarias
+dentro de test/Unit/ 
+esta un archivo llamado ExampleTest que hace prueba a una endPoint 
 
-## License
+Nota importante: Para programar, escribo todo en inglés y utilizo convenciones de nomenclatura en inglés.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Si tienes alguna duda, abre un issue para soporte.
